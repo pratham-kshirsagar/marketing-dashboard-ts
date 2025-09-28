@@ -1,12 +1,12 @@
-import Topbar from "./components/Topbar";
-import PythiaPanel from "./components/PythiaPanel";
-import KpiCard from "./components/KpiCard";
-import SummaryCard from "./components/SummaryCard";
-import StackedBar from "./components/StackedBar";
-import FunnelBlock from "./components/Funnel";
-import Donut from "./components/Donut";
-import DataTable from "./components/DataTable";
-import SocialMedia from "./components/SocialMedia";
+import Topbar from './components/Topbar';
+import PythiaPanel from './components/PythiaPanel';
+import KpiCard from './components/KpiCard';
+import SummaryCard from './components/SummaryCard';
+import StackedBar from './components/StackedBar';
+import FunnelBlock from './components/Funnel';
+import Donut from './components/Donut';
+import DataTable from './components/DataTable';
+import SocialMedia from './components/SocialMedia';
 
 import {
   kpis,
@@ -17,7 +17,7 @@ import {
   donutDownloads,
   tableRows,
   social,
-} from "./data";
+} from './data';
 
 export default function App() {
   return (
@@ -58,9 +58,7 @@ export default function App() {
               <KpiCard key={k.title} {...k} />
             ))}
           </div>
-          <div className="small-foot">
-            Data sourced from: Adobe Analytics – 1 Mar – 18 Mar
-          </div>
+          <div className="small-foot">Data sourced from: Adobe Analytics – 1 Mar – 18 Mar</div>
 
           {/* Summary */}
           <SummaryCard />
@@ -71,25 +69,13 @@ export default function App() {
           {/* Funnel + Blog Topics */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <FunnelBlock data={funnel} />
-            <Donut
-              title="Visit to Blog Post by Topic"
-              data={donutVisitTopic}
-              total={12130}
-            />
+            <Donut title="Visit to Blog Post by Topic" data={donutVisitTopic} total={12130} />
           </div>
 
           {/* Focus Funds + Downloads */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <Donut
-              title="Visits by Focus Funds"
-              data={donutFocusFunds}
-              total={1400}
-            />
-            <Donut
-              title="Downloads by Type"
-              data={donutDownloads}
-              total={12130}
-            />
+            <Donut title="Visits by Focus Funds" data={donutFocusFunds} total={1400} />
+            <Donut title="Downloads by Type" data={donutDownloads} total={12130} />
           </div>
 
           {/* Channel Performance */}

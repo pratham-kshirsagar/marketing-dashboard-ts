@@ -1,22 +1,14 @@
-import { MoreVertical, SendHorizonal, Sparkles } from "lucide-react";
-import {
-  Line,
-  LineChart,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-  Legend,
-} from "recharts";
+import { MoreVertical, SendHorizonal, Sparkles } from 'lucide-react';
+import { Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis, Legend } from 'recharts';
 
 const chartData = [
-  { name: "Mon", a: 40, b: 25 },
-  { name: "Tue", a: 60, b: 40 },
-  { name: "Wed", a: 35, b: 50 },
-  { name: "Thu", a: 80, b: 60 },
-  { name: "Fri", a: 95, b: 75 },
-  { name: "Sat", a: 70, b: 65 },
-  { name: "Sun", a: 55, b: 30 },
+  { name: 'Mon', a: 40, b: 25 },
+  { name: 'Tue', a: 60, b: 40 },
+  { name: 'Wed', a: 35, b: 50 },
+  { name: 'Thu', a: 80, b: 60 },
+  { name: 'Fri', a: 95, b: 75 },
+  { name: 'Sat', a: 70, b: 65 },
+  { name: 'Sun', a: 55, b: 30 },
 ];
 
 export default function PythiaPanel() {
@@ -27,9 +19,7 @@ export default function PythiaPanel() {
         <div className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-indigo-600 to-blue-600 text-white">
           <div>
             <div className="font-semibold">Chat with Pythia</div>
-            <div className="text-xs opacity-80">
-              Ask questions in natural language
-            </div>
+            <div className="text-xs opacity-80">Ask questions in natural language</div>
           </div>
           <MoreVertical className="w-5 h-5" />
         </div>
@@ -48,17 +38,15 @@ export default function PythiaPanel() {
               Commentary
             </div>
             <p className="text-sm text-gray-700 leading-relaxed">
-              We identified a 15% drop in conversions from March 1–7 compared to
-              the previous week. Below are the detailed factors influencing
-              this:
+              We identified a 15% drop in conversions from March 1–7 compared to the previous week.
+              Below are the detailed factors influencing this:
               <br />
               <strong>Mobile Bounce Rate:</strong> Increased from 35% to 45%.
               <br />
-              <strong>Region Specific Impact:</strong> Europe saw a 25% drop,
-              while North America was mostly stable.
+              <strong>Region Specific Impact:</strong> Europe saw a 25% drop, while North America
+              was mostly stable.
               <br />
-              <strong>Likely Cause:</strong> Ad creative change on mobile
-              channels.
+              <strong>Likely Cause:</strong> Ad creative change on mobile channels.
             </p>
 
             {/* Chart */}

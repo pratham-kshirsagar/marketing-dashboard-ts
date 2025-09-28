@@ -1,15 +1,8 @@
-import { Pie, PieChart, ResponsiveContainer, Cell } from "recharts";
-import SectionHeader from "./SectionHeader";
+import { Pie, PieChart, ResponsiveContainer, Cell } from 'recharts';
+import SectionHeader from './SectionHeader';
 
 type Row = { name: string; value: number };
-const colors = [
-  "#3b82f6",
-  "#f59e0b",
-  "#60a5fa",
-  "#fbbf24",
-  "#6366f1",
-  "#f97316",
-];
+const colors = ['#3b82f6', '#f59e0b', '#60a5fa', '#fbbf24', '#6366f1', '#f97316'];
 
 export default function Donut({
   data,

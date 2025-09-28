@@ -8,7 +8,7 @@ import {
   YAxis,
   ComposedChart,
   Legend,
-} from "recharts";
+} from 'recharts';
 type Row = { name: string; bars: number; line: number };
 export default function BarsWithLine({ data }: { data: Row[] }) {
   return (
@@ -25,12 +25,7 @@ export default function BarsWithLine({ data }: { data: Row[] }) {
             <YAxis yAxisId="right" orientation="right" />
             <Tooltip />
             <Legend />
-            <Bar
-              yAxisId="left"
-              dataKey="bars"
-              fill="#fdbb74"
-              radius={[6, 6, 0, 0]}
-            />
+            <Bar yAxisId="left" dataKey="bars" fill="#fdbb74" radius={[6, 6, 0, 0]} />
             <Line
               yAxisId="right"
               type="monotone"

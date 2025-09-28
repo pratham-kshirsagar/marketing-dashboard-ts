@@ -7,23 +7,23 @@ import {
   Tooltip,
   Legend,
   ReferenceLine,
-} from "recharts";
-import SectionHeader from "./SectionHeader";
+} from 'recharts';
+import SectionHeader from './SectionHeader';
 
 type Row = Record<string, number | string>;
 
 // Design palette (bottom → top)
 const COLORS: Record<string, string> = {
-  Organic: "#1D4ED8", // deep blue
-  Direct: "#60A5FA", // light blue
-  Email: "#93C5FD", // lighter blue
-  Referral: "#F59E0B", // orange
-  Social: "#FBBF24", // yellow
-  Other: "#FDE68A", // pale yellow
+  Organic: '#1D4ED8', // deep blue
+  Direct: '#60A5FA', // light blue
+  Email: '#93C5FD', // lighter blue
+  Referral: '#F59E0B', // orange
+  Social: '#FBBF24', // yellow
+  Other: '#FDE68A', // pale yellow
 };
 
 // Keys in the order they should stack (bottom → top)
-const KEY_ORDER = ["Organic", "Direct", "Email", "Referral", "Social", "Other"];
+const KEY_ORDER = ['Organic', 'Direct', 'Email', 'Referral', 'Social', 'Other'];
 
 export default function StackedBar({ data }: { data: Row[] }) {
   // Pick only keys that exist in the provided data (in our preferred order)
@@ -61,7 +61,7 @@ export default function StackedBar({ data }: { data: Row[] }) {
                 key={k}
                 dataKey={k}
                 stackId="one"
-                fill={COLORS[k] || "#ddd"}
+                fill={COLORS[k] || '#ddd'}
                 barSize={28} // << column width (make smaller if needed)
                 radius={i === keys.length - 1 ? [8, 8, 0, 0] : 0} // round only the top stack
               />

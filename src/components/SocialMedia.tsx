@@ -8,8 +8,8 @@ import {
   Tooltip,
   XAxis,
   YAxis,
-} from "recharts";
-import SectionHeader from "./SectionHeader";
+} from 'recharts';
+import SectionHeader from './SectionHeader';
 type Row = {
   day: string;
   liImp: number;
@@ -27,14 +27,14 @@ export default function SocialMedia({ data }: { data: Row[] }) {
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis
               dataKey="day"
-              label={{ value: "By Day", position: "insideBottom", offset: -5 }}
+              label={{ value: 'By Day', position: 'insideBottom', offset: -5 }}
             />
             <YAxis
               yAxisId="left"
               label={{
-                value: "Impressions",
+                value: 'Impressions',
                 angle: -90,
-                position: "insideLeft",
+                position: 'insideLeft',
               }}
             />
             <YAxis
@@ -42,7 +42,7 @@ export default function SocialMedia({ data }: { data: Row[] }) {
               orientation="right"
               tickFormatter={(v) => `${v}
 %`}
-              label={{ value: "CTR %", angle: -90, position: "insideRight" }}
+              label={{ value: 'CTR %', angle: -90, position: 'insideRight' }}
             />
             <Tooltip />
             <Legend />
@@ -80,9 +80,7 @@ export default function SocialMedia({ data }: { data: Row[] }) {
             />
           </ComposedChart>
         </ResponsiveContainer>
-        <div className="small-foot mt-2">
-          Data sourced from: Adobe Analytics – 1 Mar – 18 Mar
-        </div>
+        <div className="small-foot mt-2">Data sourced from: Adobe Analytics – 1 Mar – 18 Mar</div>
       </div>
     </div>
   );

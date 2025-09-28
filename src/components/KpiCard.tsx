@@ -1,23 +1,17 @@
-import { ChevronDown, Plus } from "lucide-react";
+import { ChevronDown, Plus } from 'lucide-react';
 
 type Props = {
   title: string;
   value: number;
-  status: "good" | "bad";
+  status: 'good' | 'bad';
   benchmark: number;
   internal: number;
 };
 
-export default function KpiCard({
-  title,
-  value,
-  status,
-  benchmark,
-  internal,
-}: Props) {
-  const isGood = status === "good";
-  const statusText = isGood ? "Performing Well" : "Needs Improvement";
-  const statusBg = isGood ? "bg-green-600" : "bg-orange-500";
+export default function KpiCard({ title, value, status, benchmark, internal }: Props) {
+  const isGood = status === 'good';
+  const statusText = isGood ? 'Performing Well' : 'Needs Improvement';
+  const statusBg = isGood ? 'bg-green-600' : 'bg-orange-500';
 
   return (
     <div className="card overflow-hidden">
@@ -54,15 +48,11 @@ export default function KpiCard({
         <div className="mt-3 grid grid-cols-2 gap-2 text-xs">
           <div className="flex items-center justify-between rounded-full bg-gray-100 px-3 py-1 text-gray-600">
             <span className="opacity-70">Benchmark</span>
-            <span className="ml-2 font-medium text-gray-800">
-              {benchmark.toLocaleString()}
-            </span>
+            <span className="ml-2 font-medium text-gray-800">{benchmark.toLocaleString()}</span>
           </div>
           <div className="flex items-center justify-between rounded-full bg-gray-100 px-3 py-1 text-gray-600">
             <span className="opacity-70">Internal</span>
-            <span className="ml-2 font-medium text-gray-800">
-              {internal.toLocaleString()}
-            </span>
+            <span className="ml-2 font-medium text-gray-800">{internal.toLocaleString()}</span>
           </div>
         </div>
       </div>

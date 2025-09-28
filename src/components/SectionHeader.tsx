@@ -1,4 +1,4 @@
-import { Plus, Info } from "lucide-react";
+import { Plus, Info } from 'lucide-react';
 export default function SectionHeader({ title }: { title: string }) {
   return (
     <div className="card-header">
