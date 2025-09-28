@@ -1,26 +1,8 @@
 export default function DataTable() {
   const data = [
-    {
-      channel: 'Facebook',
-      impressions: 1300,
-      clicks: 900,
-      conversions: 600,
-      cpc: '$23.12',
-    },
-    {
-      channel: 'YouTube',
-      impressions: 1300,
-      clicks: 900,
-      conversions: 600,
-      cpc: '$23.12',
-    },
-    {
-      channel: 'LinkedIn',
-      impressions: 1300,
-      clicks: 900,
-      conversions: 600,
-      cpc: '$23.12',
-    },
+    { channel: 'Facebook', impressions: 1300, clicks: 900, conversions: 600, cpc: '$23.12' },
+    { channel: 'YouTube', impressions: 1300, clicks: 900, conversions: 600, cpc: '$23.12' },
+    { channel: 'LinkedIn', impressions: 1300, clicks: 900, conversions: 600, cpc: '$23.12' },
   ];
 
   const totals = {

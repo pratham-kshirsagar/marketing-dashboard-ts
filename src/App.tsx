@@ -15,7 +15,6 @@ import {
   donutVisitTopic,
   donutFocusFunds,
   donutDownloads,
-  tableRows,
   social,
 } from './data';
 
@@ -79,7 +78,7 @@ export default function App() {
           </div>
 
           {/* Channel Performance */}
-          <DataTable rows={tableRows} />
+          <DataTable />
 
           {/* Social Media */}
           <SocialMedia data={social} />
