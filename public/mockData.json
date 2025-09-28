@@ -1,0 +1,50 @@
+{
+  "metrics": [
+    {"id":"m1","label":"Total Visits","value":"28,430","change":"+4.2%"},
+    {"id":"m2","label":"Conversions","value":"2,430","change":"-1.2%"},
+    {"id":"m3","label":"Conversion Rate","value":"8.6%","change":"+0.6%"},
+    {"id":"m4","label":"Avg. Session","value":"3m 12s","change":"+1.1%"}
+  ],
+  "conversionAttribution": [
+    {"channel":"Organic Search","organic":8000,"paid":2000,"referral":1200},
+    {"channel":"Paid Search","organic":200,"paid":5200,"referral":100},
+    {"channel":"Social","organic":1100,"paid":900,"referral":400},
+    {"channel":"Referral","organic":600,"paid":200,"referral":400}
+  ],
+  "funnel":[
+    {"stage":"Awareness","value":10000},
+    {"stage":"Interest","value":7000},
+    {"stage":"Consideration","value":2500},
+    {"stage":"Conversion","value":600}
+  ],
+  "visitsByTopic":[
+    {"topic":"Product","value":45},
+    {"topic":"Pricing","value":25},
+    {"topic":"Brand","value":20},
+    {"topic":"Support","value":10}
+  ],
+  "downloads":[
+    {"label":"Whitepaper","value":320},
+    {"label":"Case Study","value":120},
+    {"label":"Datasheet","value":80}
+  ],
+  "social":[
+    {"date":"2025-09-01","impressions":4000,"engagement":220},
+    {"date":"2025-09-02","impressions":4200,"engagement":240},
+    {"date":"2025-09-03","impressions":3800,"engagement":210},
+    {"date":"2025-09-04","impressions":4500,"engagement":300},
+    {"date":"2025-09-05","impressions":4700,"engagement":320},
+    {"date":"2025-09-06","impressions":4300,"engagement":280},
+    {"date":"2025-09-07","impressions":4600,"engagement":310}
+  ],
+  "tableRows":[
+    {"campaign":"Spring Launch","channel":"Paid","spend":"$3,400","conversions":340},
+    {"campaign":"Blog SEO","channel":"Organic","spend":"$220","conversions":180},
+    {"campaign":"Referral Program","channel":"Referral","spend":"$100","conversions":50}
+  ],
+  "chatSuggestions":["Show conversion by channel","Why did visits drop on Sep 3?","Create summary report"],
+  "chatExample": {
+    "user":"How did social perform last week?",
+    "ai":"Social impressions increased 10% week-on-week. Engagement was strongest on Sep 5 (higher by 14%)."
+  }
+}
