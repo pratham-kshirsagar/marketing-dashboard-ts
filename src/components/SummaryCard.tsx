@@ -1,27 +1,36 @@
+import { Info } from "lucide-react"; // you can swap icon if needed
+
 export default function SummaryCard() {
   return (
-    <div className="card">
-      <div className="card-header">
-        <div className="card-title flex items-center gap-2">
-          <span className="text-brand-700">+</span> Summary
+    <div className="border border-indigo-200 rounded-xl bg-indigo-50/30 p-4">
+      {/* Header */}
+      <div className="flex items-center justify-between border-b border-indigo-200 pb-2 mb-3">
+        <div className="flex items-center space-x-2 text-indigo-700 font-semibold">
+          <Info className="w-4 h-4" />
+          <span>Summary</span>
         </div>
-        <a href="#" className="text-sm text-brand-700 hover:underline">
+        <button className="text-sm text-indigo-600 hover:underline">
           Was this helpful?
-        </a>
+        </button>
       </div>
-      <div className="card-body">
-        <div className="font-semibold mb-2">Traffic</div>
-        <ul className="list-disc pl-5 text-sm text-gray-700 space-y-1">
+
+      {/* Content */}
+      <div className="space-y-3 text-sm text-gray-700">
+        <h3 className="font-semibold text-gray-800">Traffic</h3>
+        <ul className="list-disc pl-6 space-y-1">
           <li>
-            Campaign QQQ_Fund_Infomercial drove the highest traffic (22% above
-            average).
+            Overall, in this time period, campaign{" "}
+            <strong>QQQ_Fund_Infomercial</strong>
+            drove the highest traffic, with an 22% above average campaign
+            traffic.
           </li>
           <li>
-            Facebook underperformed this month, missing CTR target by 12%.
+            Facebook underperformed this month, missing click through target by
+            12%.
           </li>
           <li>
-            QQQ Fund Facts is the top visited site at 31,592 visits in this
-            period.
+            Page <strong>QQQ Fund Facts</strong> is the top visited site at
+            31,592 visits in this time period.
           </li>
         </ul>
       </div>

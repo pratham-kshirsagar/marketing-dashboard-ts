@@ -1,70 +1,85 @@
-import SectionHeader from "./SectionHeader";
-type Row = {
-  channel: string;
-  impressions: number;
-  clicks: number;
-  conversions: number;
-  cpc: number;
-};
-export default function DataTable({ rows }: { rows: Row[] }) {
-  const totals = rows.reduce(
-    (a, r) => ({
-      impressions: a.impressions + r.impressions,
-      clicks: a.clicks + r.clicks,
-      conversions: a.conversions + r.conversions,
-      cpc: r.cpc, // display same sample
-    }),
-    { impressions: 0, clicks: 0, conversions: 0, cpc: 23.12 }
-  );
+export default function DataTable() {
+  const data = [
+    {
+      channel: "Facebook",
+      impressions: 1300,
+      clicks: 900,
+      conversions: 600,
+      cpc: "$23.12",
+    },
+    {
+      channel: "YouTube",
+      impressions: 1300,
+      clicks: 900,
+      conversions: 600,
+      cpc: "$23.12",
+    },
+    {
+      channel: "LinkedIn",
+      impressions: 1300,
+      clicks: 900,
+      conversions: 600,
+      cpc: "$23.12",
+    },
+  ];
+
+  const totals = {
+    impressions: 3900,
+    clicks: 2700,
+    conversions: 1800,
+    cpc: "$23.12",
+  };
+
   return (
-    <div className="card overflow-hidden">
-      <SectionHeader title="Channel Performance" />
-      <div className="card-body p-0">
-        <div className="overflow-x-auto">
-          <table className="min-w-full text-sm">
-            <thead className="bg-gray-50 text-gray-600">
-              <tr>
-                <th className="text-left px-4 py-3">Channel Name</th>
-                <th className="text-right px-4 py-3">Impressions ↓</th>
-                <th className="text-right px-4 py-3">Clicks</th>
-                <th className="text-right px-4 py-3">Conversions</th>
-                <th className="text-right px-4 py-3">CPC</th>
+    <div className="card">
+      <div className="card-header">
+        <h2 className="text-lg font-semibold">Channel Performance</h2>
+      </div>
+      <div className="card-body overflow-x-auto">
+        <table className="w-full border-collapse text-sm">
+          <thead>
+            <tr className="border-b border-gray-200 text-gray-600">
+              <th className="py-3 px-4 text-left font-medium">Channel Name</th>
+              <th className="py-3 px-4 text-right font-medium">
+                Impressions ↓
+              </th>
+              <th className="py-3 px-4 text-right font-medium">Clicks</th>
+              <th className="py-3 px-4 text-right font-medium">Conversions</th>
+              <th className="py-3 px-4 text-right font-medium">CPC</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((row, i) => (
+              <tr key={i} className="border-b border-gray-100">
+                <td className="py-3 px-4 text-gray-800">{row.channel}</td>
+                <td className="py-3 px-4 text-right">
+                  {row.impressions.toLocaleString()}
+                </td>
+                <td className="py-3 px-4 text-right">
+                  {row.clicks.toLocaleString()}
+                </td>
+                <td className="py-3 px-4 text-right">
+                  {row.conversions.toLocaleString()}
+                </td>
+                <td className="py-3 px-4 text-right">{row.cpc}</td>
               </tr>
-            </thead>
-            <tbody>
-              {rows.map((r) => (
-                <tr key={r.channel} className="border-t">
-                  <td className="px-4 py-3 font-medium">{r.channel}</td>
-                  <td className="px-4 py-3 textright">
-                    {r.impressions.toLocaleString()}
-                  </td>
-                  <td className="px-4 py-3 textright">
-                    {r.clicks.toLocaleString()}
-                  </td>
-                  <td className="px-4 py-3 textright">
-                    {r.conversions.toLocaleString()}
-                  </td>
-                  <td className="px-4 py-3 text-right">${r.cpc.toFixed(2)}</td>
-                </tr>
-              ))}
-              <tr className="border-t bg-gray-50 font-semibold">
-                <td className="px-4 py-3">Total</td>
-                <td className="px-4 py-3 textright">
-                  {totals.impressions.toLocaleString()}
-                </td>
-                <td className="px-4 py-3 textright">
-                  {totals.clicks.toLocaleString()}
-                </td>
-                <td className="px-4 py-3 textright">
-                  {totals.conversions.toLocaleString()}
-                </td>
-                <td className="px-4 py-3 text-right">
-                  ${totals.cpc.toFixed(2)}
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+            ))}
+            {/* Totals row */}
+            <tr className="font-semibold">
+              <td className="py-3 px-4">Total</td>
+              <td className="py-3 px-4 text-right">
+                {totals.impressions.toLocaleString()}
+              </td>
+              <td className="py-3 px-4 text-right">
+                {totals.clicks.toLocaleString()}
+              </td>
+              <td className="py-3 px-4 text-right">
+                {totals.conversions.toLocaleString()}
+              </td>
+              <td className="py-3 px-4 text-right">{totals.cpc}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   );

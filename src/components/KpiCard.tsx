@@ -1,54 +1,68 @@
 import { ChevronDown, Plus } from "lucide-react";
-import type { KPI } from "../data";
+
+type Props = {
+  title: string;
+  value: number;
+  status: "good" | "bad";
+  benchmark: number;
+  internal: number;
+};
+
 export default function KpiCard({
   title,
   value,
   status,
   benchmark,
   internal,
-}: KPI) {
+}: Props) {
+  const isGood = status === "good";
+  const statusText = isGood ? "Performing Well" : "Needs Improvement";
+  const statusBg = isGood ? "bg-green-600" : "bg-orange-500";
+
   return (
-    <div className="card">
-      <div className="p-4">
+    <div className="card overflow-hidden">
+      {/* subtle top gradient like the mock */}
+      <div className="p-4 bg-gradient-to-b from-indigo-50/60 to-transparent">
+        {/* title row */}
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2 text-sm text-gray-600">
+          <div className="flex items-center gap-2 text-sm font-medium text-gray-800">
             <span>{title}</span>
-            <ChevronDown className="w-4 h-4" />
+            <ChevronDown className="h-4 w-4 text-gray-500" />
           </div>
-          <button className="rounded-xl border p-1 text-gray-600 hover:bggray-50">
-            <Plus className="w-4 h-4" />
+
+          <button
+            aria-label="Add"
+            className="rounded-xl border border-indigo-300 p-1.5 text-indigo-700 hover:bg-indigo-50"
+          >
+            <Plus className="h-4 w-4" />
           </button>
         </div>
-        <div className="mt-3 text-3xl font-semibold">
+
+        {/* main value */}
+        <div className="mt-2 text-3xl md:text-4xl font-semibold text-gray-900">
           {value.toLocaleString()}
         </div>
-        <div className="mt-3 flex items-center gap-2">
-          <span
-            className={`pill ${
-              status === "good"
-                ? "bg-green-100 textgreen-700"
-                : "bg-orange-100 text-orange-700"
-            }`}
-          >
-            {status === "good" ? "Performing Well" : "Needs Improvement"}
-          </span>
+
+        {/* full-width status bar with label */}
+        <div
+          className={`mt-3 h-8 ${statusBg} rounded-full text-white text-sm font-semibold flex items-center justify-center`}
+        >
+          {statusText}
         </div>
-        <div className="mt-4 grid grid-cols-3 gap-2 text-xs text-gray-500">
-          <div>
-            <div className="text-gray-500">Benchmark</div>
-            <div className="font-medium text-gray-700">
+
+        {/* benchmark / internal row */}
+        <div className="mt-3 grid grid-cols-2 gap-2 text-xs">
+          <div className="flex items-center justify-between rounded-full bg-gray-100 px-3 py-1 text-gray-600">
+            <span className="opacity-70">Benchmark</span>
+            <span className="ml-2 font-medium text-gray-800">
               {benchmark.toLocaleString()}
-            </div>
+            </span>
           </div>
-          <div>
-            <div className="text-gray-500">Internal</div>
-            <div className="font-medium textgray-700">
+          <div className="flex items-center justify-between rounded-full bg-gray-100 px-3 py-1 text-gray-600">
+            <span className="opacity-70">Internal</span>
+            <span className="ml-2 font-medium text-gray-800">
               {internal.toLocaleString()}
-            </div>
-          </div>
-          <div>
-            <div className="text-gray-500"> </div>
-            <div className="font-medium text-gray-700"> </div>
+            </span>
           </div>
         </div>
       </div>
