@@ -27,7 +27,7 @@ export default function App() {
       {/* Greeting + Filters */}
       <div className="mx-auto w-full max-w-[120rem] px-4 pt-6">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-          <div className="text-lg font-semibold">Welcome, Yourfirstname</div>
+          <div className="text-lg font-semibold">Welcome, User</div>
           <div className="flex flex-wrap items-center gap-2">
             <div className="text-sm text-gray-500">User Role</div>
             <select className="select">
