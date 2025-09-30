@@ -17,14 +17,11 @@ export default function SummaryCard() {
         <h3 className="font-semibold text-gray-800">Traffic</h3>
         <ul className="list-disc pl-6 space-y-1">
           <li>
-            Overall, in this time period, campaign <strong>QQQ_Fund_Infomercial</strong>
-            drove the highest traffic, with an 22% above average campaign traffic.
+            Overall, in this time period, campaign QQQ_Fund_Infomercial drove the highest traffic,
+            with an 22% above average campaign traffic.
           </li>
           <li>Facebook underperformed this month, missing click through target by 12%.</li>
-          <li>
-            Page <strong>QQQ Fund Facts</strong> is the top visited site at 31,592 visits in this
-            time period.
-          </li>
+          <li>Page QQQ Fund Facts is the top visited site at 31,592 visits in this time period.</li>
         </ul>
       </div>
     </div>
