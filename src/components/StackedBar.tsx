@@ -64,7 +64,7 @@ export default function StackedBar({ data }: { data: Row[] }) {
         </ResponsiveContainer>
 
         <div className="text-xs text-gray-500 mt-2">
-          Data sourced from: Adobe Analytics – 1 Mar – 18 Mar
+          Data sourced from: Adobe Analytics - 1 Mar - 18 Mar
         </div>
       </div>
     </div>
