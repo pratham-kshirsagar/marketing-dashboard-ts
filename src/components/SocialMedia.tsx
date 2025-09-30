@@ -80,7 +80,7 @@ export default function SocialMedia({ data }: { data: Row[] }) {
             />
           </ComposedChart>
         </ResponsiveContainer>
-        <div className="small-foot mt-2">Data sourced from: Adobe Analytics – 1 Mar – 18 Mar</div>
+        <div className="small-foot mt-2">Data sourced from: Adobe Analytics - 1 Mar - 18 Mar</div>
       </div>
     </div>
   );

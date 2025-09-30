@@ -70,7 +70,7 @@ export default function PythiaPanel() {
                 </LineChart>
               </ResponsiveContainer>
               <div className="text-xs text-gray-500 mt-1">
-                Data sourced from: XXXX | 1 Mar – 18 Mar
+                Data sourced from: XXXX | 1 Mar - 18 Mar
               </div>
             </div>
           </div>
