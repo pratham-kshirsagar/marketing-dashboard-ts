@@ -34,7 +34,7 @@ export default function App() {
 
             <div className="text-sm text-gray-500 ml-2">Date Range</div>
             <select className="select">
-              <option>01-03 – 18-03-2024</option>
+              <option>01-03 - 18-03-2024</option>
             </select>
 
             <div className="text-sm text-gray-500 ml-2">Comparison</div>
