@@ -40,8 +40,7 @@ export default function SocialMedia({ data }: { data: Row[] }) {
             <YAxis
               yAxisId="right"
               orientation="right"
-              tickFormatter={(v) => `${v}
-%`}
+              tickFormatter={(v) => `${v}%`}
               label={{ value: 'CTR %', angle: -90, position: 'insideRight' }}
             />
             <Tooltip />
