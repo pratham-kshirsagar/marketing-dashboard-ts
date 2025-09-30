@@ -38,7 +38,7 @@ export default function FunnelBlock({ data }: { data: Row[] }) {
 
   return (
     <div className="card">
-      <SectionHeader title="Marketing’s Contributions to Sales Pipeline" />
+      <SectionHeader title="Marketing's Contributions to Sales Pipeline" />
 
       <div className="card-body relative">
         <div className="w-full h-80">
@@ -88,11 +88,11 @@ export default function FunnelBlock({ data }: { data: Row[] }) {
         </div>
 
         <div className="absolute right-4 top-[63%] translate-y-[-50%] text-sm font-medium text-gray-700">
-          Cost Per conversion – $23.02
+          Cost Per conversion - $23.02
         </div>
 
         <div className="mt-2 text-xs text-gray-500">
-          Data sourced from: Adobe Analytics – 1 Mar – 18 Mar
+          Data sourced from: Adobe Analytics - 1 Mar - 18 Mar
         </div>
       </div>
     </div>
