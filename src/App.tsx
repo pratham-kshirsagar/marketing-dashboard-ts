@@ -52,7 +52,7 @@ export default function App() {
               <KpiCard key={k.title} {...k} />
             ))}
           </div>
-          <div className="small-foot">Data sourced from: Adobe Analytics – 1 Mar – 18 Mar</div>
+          <div className="small-foot">Data sourced from: Adobe Analytics - 1 Mar - 18 Mar</div>
 
           <SummaryCard />
 
