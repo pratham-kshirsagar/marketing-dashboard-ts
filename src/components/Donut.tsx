@@ -38,12 +38,10 @@ export default function Donut({
           </PieChart>
         </ResponsiveContainer>
 
-        {/* Centered total */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <span className="text-2xl font-bold">{sum.toLocaleString()}</span>
         </div>
 
-        {/* Legend below chart */}
         <div className="flex flex-wrap gap-3 mt-3 text-xs text-gray-700 justify-center">
           {data.map((d, i) => (
             <div key={i} className="flex items-center gap-1">

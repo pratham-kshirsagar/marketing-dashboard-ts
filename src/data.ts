@@ -7,7 +7,7 @@ export type KPI = {
 };
 export const kpis: KPI[] = [
   {
-    title: 'Impressions – Organic Total',
+    title: 'Impressions - Organic Total',
     value: 1200,
     status: 'good',
     benchmark: 1200,

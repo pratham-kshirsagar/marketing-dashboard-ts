@@ -15,9 +15,7 @@ export default function KpiCard({ title, value, status, benchmark, internal }: P
 
   return (
     <div className="card overflow-hidden">
-      {/* subtle top gradient like the mock */}
       <div className="p-4 bg-gradient-to-b from-indigo-50/60 to-transparent">
-        {/* title row */}
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2 text-sm font-medium text-gray-800">
             <span>{title}</span>
@@ -32,19 +30,16 @@ export default function KpiCard({ title, value, status, benchmark, internal }: P
           </button>
         </div>
 
-        {/* main value */}
         <div className="mt-2 text-3xl md:text-4xl font-semibold text-gray-900">
           {value.toLocaleString()}
         </div>
 
-        {/* full-width status bar with label */}
         <div
           className={`mt-3 h-8 ${statusBg} rounded-full text-white text-sm font-semibold flex items-center justify-center`}
         >
           {statusText}
         </div>
 
-        {/* benchmark / internal row */}
         <div className="mt-3 grid grid-cols-2 gap-2 text-xs">
           <div className="flex items-center justify-between rounded-full bg-gray-100 px-3 py-1 text-gray-600">
             <span className="opacity-70">Benchmark</span>

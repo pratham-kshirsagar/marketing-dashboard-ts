@@ -1,4 +1,4 @@
-import { Info } from 'lucide-react'; // you can swap icon if needed
+import { Info } from 'lucide-react';
 
 export default function SummaryCard() {
   return (

@@ -21,10 +21,8 @@ import {
 export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Top Navigation */}
       <Topbar />
 
-      {/* Greeting + Filters */}
       <div className="mx-auto w-full max-w-[120rem] px-4 pt-6">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div className="text-lg font-semibold">Welcome, User</div>
@@ -47,11 +45,8 @@ export default function App() {
         </div>
       </div>
 
-      {/* Main Content */}
       <main className="mx-auto w-full max-w-[120rem] px-4 py-6 grid grid-cols-1 xl:grid-cols-[1fr_26rem] gap-6">
-        {/* Left Section */}
         <section className="space-y-6">
-          {/* KPI Row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-4">
             {kpis.map((k) => (
               <KpiCard key={k.title} {...k} />
@@ -59,32 +54,25 @@ export default function App() {
           </div>
           <div className="small-foot">Data sourced from: Adobe Analytics – 1 Mar – 18 Mar</div>
 
-          {/* Summary */}
           <SummaryCard />
 
-          {/* Conversion Attribution */}
           <StackedBar data={stacked} />
 
-          {/* Funnel + Blog Topics */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <FunnelBlock data={funnel} />
             <Donut title="Visit to Blog Post by Topic" data={donutVisitTopic} total={12130} />
           </div>
 
-          {/* Focus Funds + Downloads */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <Donut title="Visits by Focus Funds" data={donutFocusFunds} total={1400} />
             <Donut title="Downloads by Type" data={donutDownloads} total={12130} />
           </div>
 
-          {/* Channel Performance */}
           <DataTable />
 
-          {/* Social Media */}
           <SocialMedia data={social} />
         </section>
 
-        {/* Right Sidebar */}
         <PythiaPanel />
       </main>
     </div>
